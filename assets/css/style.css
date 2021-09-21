@@ -184,6 +184,9 @@ nav a:last-child {
 .weatherService{
     background-image: url("../images/weather.jpg");
 }
+.about-me-site{
+    background-image: url("../images/aboutme.jpg");
+}
 
 .contactMe address{
     display: flex;
