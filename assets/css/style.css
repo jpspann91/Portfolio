@@ -124,127 +124,212 @@ nav a:last-child {
     margin: 20px;
     /*round out the corners of the border radius*/
     border-radius: 20%;
+    /*Lower opacity so it becomes clear when hovered over*/
     opacity: 0.8;
 }
-
+/*Pseudo class hover for image elements that fall within hero class elements*/
 .hero img:hover{
+    /*make image clear when hovered over currently 0.8*/
     opacity: 1;
 }
-
+/*Element Selector for all divs under hero class*/
 .hero div {
+    /*image does not change when screen size is adjusted*/
     flex: 0 0 90%;
 }
-
+/*Element selector for all h2's under the hero class*/
 .hero h2 {
+    /*Sets BGC to Cyan*/
     background-color: var(--secondary);
+    /*set text color to dark blue*/
     color: var(--tertiary);
+    /*No margin*/
     margin: 0;
+    /*More L/R padding then top and bottom*/
     padding: 5px 10px;
+    /*set font sixe to 25 pixels*/
     font-size: 25px;
-    line-height: 1.2;
+    /*Provide line height between things*/
+    line-height: 2.5;
+    /*keeps h2 elements inline as opposed to block*/
     display: inline;
+    /*set fonts*/
     font-family: fantasy, monospace, 'Courier New', Courier, monospace ;
 }
+/*Class selector sets max width and auto margins for the entire page*/
 .page{
     max-width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
+/*Class selector for different section of the site About Me, Work, Contact Me*/
 .section{
+    /*Sets margin for top and bottom of each section none on L/R*/
     margin: 25px 0;
+    /*Sets padding on top and bottom none on L/R*/
     padding: 10px 0;
+    /*Allows elements within section to follow flex box model*/
     display: flex;
+    /*Sets elements in section to be in row format*/
     flex-direction: row;
+    /*Allows elements to coninue onto next line when screen is changed*/
     flex-wrap: wrap;
+    /*Allows elements to stetch entire area of the element*/
     align-items: stretch;
+    /*Provides space between elements*/
     justify-content: space-between;
 
 }
+/*Child Combinator effects only h2 elements that are children withint the section*/
 .section > h2{
+    /*Keeps headers position the same during screen changes*/
     flex: 0 0 20%;
+    /*Sets font family to monospace*/
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /*Aligns text to the right side of the header elements*/
     text-align: right;
+    /*Pushes Heade to the right side*/
     padding-right: 15px;
-    border-right: 4px solid black;
-    font-size: vw;
+    /*Gives border on the right side, seperates from content within that section*/
+    border-right: 4px solid var(--dark);
+    /*Sets text 2.5 of the root font size within the view window*/
+    font-size: 2.5vw;
+    /*Line height bewtween lines*/
     line-height: 1.1;
+    /*Sets color to purple variable*/
     color: var(--primary);
 }
+/*Child combinator effects all divs within section class*/
 .section > div{
+    /*keeps div elements the same size up to 75%*/
     flex: 0 0 75%;
 }
-
+/*Element selector for all paragraph tags within section element*/
 .section p{
+    /*sets bottom margin*/
     margin-bottom: 20px;
+    /*sets text color to black*/
     color: black;
+    /*sets font to monospace*/
     font-family: monospace;
+    /*serts font size*/
     font-size: 20px;
 }
+/*Class selector to hold Grid Items, Work sectin broken down into a grid*/
 .grid {
+    /*Set display to grid*/
     display: grid;
+    /*Grid takes up 100% of the width of the element it's contained in*/
     width: 100%;
+    /*Sets grid template for columns 12 columns wide*/
     grid-template-columns: repeat(12,1fr);
+    /*Sets column gap*/
+    grid-column-gap: 5px;
+    /*Sets row gap*/
+    grid-row-gap: 5px;
 }
+/*Class selector for grid items, represents each individual project under work section*/
 .grid-item{
+    /*sets initial border solid and purple*/
     border: 5px solid var(--primary);
+    /*Normal column takes up up 4/12 spaces*/
     grid-column: span 4;
-    background-color: tomato;
+    /*Set BGC for Luminosity*/
+    background-color: var(--primary);
+    /*Sets text color to darkblue*/
     color: var(--tertiary);
+    /*min height for each item is 100px*/
     min-height: 100px;
+    /*Allows element items to follow flexbox model*/
     display: flex;
+    /*Stacks elements from the end*/
     align-items: flex-end;
+    /*Only provide padding on the bottom of each grid item*/
     padding: 0 0 20px 0;
+    /*No text decoration no underline or etc*/
     text-decoration: none;
+    /*Keeps different color until hovered over*/
     background-blend-mode:luminosity;
-    background-size: 150%;
+    /*Makes BG image take up more than needed */
+    background-size: 100%;
+    /*Make font slight smaller then default font size*/
     font-size: 0.8rem;
 }
+/*Make first child in grid slightly large than the others*/
 .grid-item:first-child {
+    /*Make first child span 8/12 columns instead of just 4*/
     grid-column: span 8;
+    /*Make first child span 2 rows which instead of just 1*/
     grid-row: span 2;
 }
+/*Psuedo class for hover of Grid items*/
 .grid-item:hover {
+    /*Change BGC to black*/
     background-color: rgba(0, 0, 0, 0.3);
+    /*change border color to highlight the grid item*/
     border-color: tomato;
 }
+/*Element selector for all divs within grid-item class*/
 .grid-item div {
+    /*Set BGC to Cyan*/
     background-color: var(--secondary);
+    /*Give the div a padding to git within the grid item elements*/
     padding: 8px 10px;
 }
+/*Element selector for all h3 tags within grid-item elements*/
 .grid-item h3 {
+    /*Make size slightly large then default font size*/
     font-size: 1.4rem;
+    /*Set the color of the header to dark blue*/
+    color: var(--dark);
 }
-
+/*Sets BG image for horiseon grid item*/
 .horiseon {
     background-image: url("../images/horiseon.png");
 }
+/*Sets BG image for treausre game grid item*/
 .treasureGame{
     background-image: url("../images/treasuregame.jpg");
 }
+/*Sets BG image for block chain grid item*/
 .blockChain{
     background-image: url("../images/blockchain.jpg");
 }
+/*Sets BG image for sockets grid item*/
 .sockets{
     background-image: url("../images/sockets.jpg");
 }
+/*Sets BG image for tree grid item*/
 .tree{
     background-image: url("../images/tree.jpg");
 }
+/*Sets BG image for weather service grid item*/
 .weatherService{
     background-image: url("../images/weather.jpg");
 }
+/*Sets BG image for about me grid item, currently hidden to make the grid look nice*/
 .about-me-site{
     background-image: url("../images/aboutme.jpg");
 }
 
+/*Element selector for all address tags contained within Contact Me class*/
 .contactMe address{
+    /*Allows content with element to follow flex box model*/
     display: flex;
+    /*Allows content to wrap to the next line when screen changes size*/
     flex: wrap;
+    /*Provides space around the contents of the element*/
     justify-content: space-around;
+    /*Aligns the content to the center of the element*/
     align-items: center;
+    /*Sets height to 100% of the element it is contained in*/
     height: 100%;
 }
+/*Element selector for all anchor tags within an address element within the contact me class element*/
 .contactMe address a{
-    color: var(--tertiary);
+    /*Set color for anchor text*/
+    color: red;
+    /*padding on all sides of theanchor tagh*/
     padding: 5px;
     text-decoration: none;
     font-size: 1.1rem;
