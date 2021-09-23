@@ -1,81 +1,129 @@
+/*Variables for coloring scheme*/
 :root{
     --primary: rgb(121,82,125);
     --secondary: cyan;
     --tertiary: rgb(17, 71, 126);
     --dark: rgba(28, 29, 33, 1);
-    --light: rgba(238, 238, 247, 1); 
+    --light: gainsboro;
 }
+/*Set font family for the entire body of the site and set width and hgith properies with box-sizing*/
 *{
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
+/*Set background color for entire page to light variable*/
 body{
-    background-color:gainsboro;
+    background-color: var(--light);
+    font-size: 16px;
 }
+/*Header element selector*/
 header {
+    /*Set padding around the header*/
     padding: 15px 6% 15px 0;
+    /*Allows element to fit on one row*/
     display: flex;
+    /*Keeps nav menu in a row*/
     flex-direction: row;
+    /*Provides space between elements within header*/
     justify-content: space-between;
+    /*allows elemnts in header to wrap when screen size changes*/
     flex-wrap: wrap;
+    /*aligns elements to the center of the header*/
     align-items: center;
+    /*Sets BGC to dark blue variable color*/
     background-color: var(--tertiary);
 }
-
+/*Element Selctor h1's under Header element*/
 header h1 {
+    /*Sets text to dark blue variable color*/
     color: var(--tertiary);
+    /*sets BGC to Cyan*/
     background-color: var(--secondary);
+    /*Proivees padding for h1 element*/
     padding: 5px 1% 5px 5%;
+    /*No margin*/
     margin: 0;
+    /*Changes depending on the viewport*/
     font-size: 3vw;
+    /*Spacing between lines*/
     line-height: 1;
 }
-
+/*Element elector for Nav elements*/
 nav {
+    /*lays out contents according to flexbox model*/
     display: flex;
+    /*sets content to be in row format*/
     flex-direction: row;
+    /*allows content to go to next line when screen size is changed*/
     flex-wrap: wrap;
 }
-
+/*elements selctor for A's under nav element*/
 nav a {
+    /*Clears out any decorations set by previous properties*/
     text-decoration: none;
+    /*More padding on L/R then top and bottom*/
     padding: 5px 10px;
+    /*Set color to variable for cyan*/
     color: var(--secondary);
+    /*Margin only on right side*/
     margin-right: 10px;
-    background-image: linear-gradient(270deg, var(--secondary) 0%, var(--secondary) 100%);
+    /*Provide linear gradient background when hovering*/
+    background-image: linear-gradient(var(--secondary), var(--primary));
+    /*does not allow BG image to repeat*/
     background-repeat: no-repeat;
+    /*Limits background size to just be the bottom section*/
     background-size: 100% 0.2em;
+    /*easy way to underline the text in nav bar*/
     background-position: bottom;
-    transition: all 0.1s ease-in;
+    /*Transition propeties effects the whole element in 0.5 seconds ease in*/
+    transition: all 0.5s ease-in;
+    /*sets to 1.4 times the normal font size*/
     font-size: 1.4rem;
 }
-
+/*Psuedo hover class for anchor tags in nav element*/
 nav a:hover {
+    /*Change background size to 100% by 100% was 100% by 0.2em*/
     background-size: 100% 100%;
-    color: var(--primary);
+    /*Change text color to light variable needed for contrast*/
+    color: var(--light);
 }
-
+/*last annchor element will have no right margin*/
 nav a:last-child {
     margin-right: 0;
 }
+/*Hero class selector for image at top of page*/
 .hero{
-    background: rgb(68, 88, 120);
+    /*Sets background image grabbed from the internet*/
     background-image: url("../images/topimage.jpg");
+    /*ensures background image covers the entire html element it is contained in*/
     background-size: cover;
+    /*Positions BG image in the center of the element*/
     background-position: center;
+    /*sets minimum view height*/
     min-height: 30vh;
+    /*sets text color to light variable*/
     color: var(--light);
+    /*provides more padding on L/R as then top and bottom*/
     padding: 2% 6%;
+    /*allows content to follow flexbox model*/
     display: flex;
+    /*packs flex items from the end*/
     justify-content: flex-end;
+    /*packs flex items from the end*/
     align-items: flex-end;
+    /*aligns text to the right */
     text-align: right;
+    /*pads left hand side*/
     padding-left: 10vw;
 }
+/*element selector for all images under hero class, this is the picture of myself*/
 .hero img {
+    /*Set width for image of myself*/
     width: 150px;
+    /*set margin to push away from side of the page*/
     margin: 20px;
-    border-radius: 10%;
+    /*round out the corners of the border radius*/
+    border-radius: 20%;
     opacity: 0.8;
 }
 
@@ -139,7 +187,7 @@ nav a:last-child {
 .grid-item{
     border: 5px solid var(--primary);
     grid-column: span 4;
-    background-color: coral;
+    background-color: tomato;
     color: var(--tertiary);
     min-height: 100px;
     display: flex;
@@ -156,7 +204,7 @@ nav a:last-child {
 }
 .grid-item:hover {
     background-color: rgba(0, 0, 0, 0.3);
-    border-color: coral;
+    border-color: tomato;
 }
 .grid-item div {
     background-color: var(--secondary);
@@ -209,7 +257,7 @@ nav a:last-child {
     margin: 0 0.2rem 0.1rem;
     display: inline-block;
 }
-.contact address a:hover {
+.contactMe address a:hover {
     background-size: 100% 88%;
     color: var(--light);
 }
