@@ -328,91 +328,140 @@ nav a:last-child {
 /*Element selector for all anchor tags within an address element within the contact me class element*/
 .contactMe address a{
     /*Set color for anchor text*/
-    color: red;
+    color: tomato;
     /*padding on all sides of theanchor tagh*/
     padding: 5px;
+    /*Removes text decorations*/
     text-decoration: none;
+    /*slightly larger font size then default*/
     font-size: 1.1rem;
+    /*normal font size*/
     font-style: normal;
-    background-image: linear-gradient(270deg, var(--primary) 0%, var(--primary) 100%);
+    /*provide backgroundimage and underline*/
+    background-image: linear-gradient(270deg, var(--primary) 0%, tomato 100%);
+    /*m,akes sure background does not repeat*/
     background-repeat: no-repeat;
+    /*Provides small background before hover*/
     background-size: 100% 0.2em;
+    /*positions at the bottom for underline*/
     background-position: bottom;
+    /*properties for transition/ hover*/
     transition: all 0.25s ease-in;
+    /*provides margins for addresses*/
     margin: 0 0.2rem 0.1rem;
+    /*allows addresses to follow flex box model*/
     display: inline-block;
 }
+/*psuedo class for address elements under contactMe class*/
 .contactMe address a:hover {
+    /*Changes background size when hovered over*/
     background-size: 100% 88%;
+    /*Changes text color to be seen better*/
     color: var(--light);
 }
 
 /* Footer formatting */
 footer  {
-    font-size: 1.0em;
+    /*Sets footer to slightly larger then default size*/
+    font-size: 1.5em;
+    /*Aligns footer to center*/
     text-align: center;
+    /*pushes content to the bototm of the footer element*/
     vertical-align: bottom;
+    
   }
+/*Psuedo clas for hover over anchor tags within the footer element*/
 footer a:hover{
+    /*Changes background image size when hovered over*/
     background-size: 100% 100%;
+    /*changes text color to be seen better*/
     color: var(--light);
+    /*Gives a gradient background color when hovered over*/
+    background-image: linear-gradient(270deg, var(--primary) 0%, tomato 100%);
 } 
 
-
+/*At rules for when screen size changes Tablets*/
 @media screen and (max-width: 980px) {
+    /*Change header propeties*/    
     header {
+        /*Provides padding only to the bottom*/
         padding: 0 0 10px 0;
+        /*Aligns content to the center of the header*/
         justify-content: center;
+        /*aligns text to the center*/
         text-align: center;
     }
-
+    /*Changes to h1 header*/
     header h1 {
+        /*Takes up 100% of the element it is contained in*/
         width: 100%;
+        /*Provides padding all around*/
         padding: 5px;
+        /*Provides margin all around*/
         margin-bottom: 10px;
+        /*Changes font size to fit view port*/
         font-size: 10vw;
     }
-
+    /*Changes to nav elements*/
     header nav {
+        /*Centers the content of the nav element*/
         justify-content: center;
     }
-
-    .page-section > h2,
-    .page-section > div {
+    /*Child combinator changes h2 tags under section class*/
+    .section > h2,
+    /*Child combinator changes div tags under section class*/
+    .section > div {
+        
         flex: 0 0 100%;
     }
-
-    .page-section > h2 {
+    /*Child combinator changes h2 tags under section class*/
+    .section > h2 {
+        /*Remove right hand border*/
         border-right: none;
-        border-bottom: 4px solid var(--primary);
+        /*Change bnorder to the bottom instead*/
+        border-bottom: 4px solid var(--dark);
+        /*provides bottom margin for header*/
         margin-bottom: 20px;
+        /*provides bottom padding*/
         padding-bottom: 10px;
+        /*pushes text to the left hand side of header*/
         text-align: left;
+        /*Makes font slightly large in the viewport*/
         font-size: 7vw;
     }
-
-    .hero-banner {
+    /*Changes to hero class*/
+    .hero {
+        /*Makes Hero section stack in a column*/
         flex-direction: column;
+        /*Gives space between contetn*/
         justify-content: space-between;
+        /*Aligns items (img) to the center of the hero class*/
         align-items: center;
+        /*Aligns text to the center*/
         text-align: center;
+        /*Provides padding on the left of the hero class*/
         padding-left: 50px;
     }
 }
 
-/* Max Width 768px*/
+/* Max Width 768px Phones*/
 @media screen and (max-width: 768px) {
+    /*Changes grid item and first child grid item*/
     .grid-item,
     .grid-item:first-child {
+        /*Makes grid item take 1 row and 1 column*/
+        /*Makes sure first child now takes up same amount of space as the rest*/
         grid-column: 1 / -1;
     }
-
+    /*Changes the row format when screen is small enough*/
     .grid-container {
         grid-auto-rows: minmax(200px, 1fr);
     }
-
+    /*Changes to address elements*/
     .contactMe address {
+        /*Makes address stack in a column as opposed to cramping together*/
         flex-direction: column;
+        /*Aligns address to the center of the element*/
         align-items: center;
     }
 }
