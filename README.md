@@ -33,10 +33,11 @@ Joseph Paul Spann
 Completed before 09/25/2021
 
 ## Screenshot
+
  image URL located within project: [./assets/images/portfolio_final.png]
 
 ## Link
 
-URL Link to website: https://jpspann91.github.io/Refactor_Homework_Due09-18/
+URL Link to website: https://jpspann91.github.io/Portfolio/
 
 
