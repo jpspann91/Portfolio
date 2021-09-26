@@ -123,7 +123,7 @@ nav a:last-child {
     /*set margin to push away from side of the page*/
     margin: 20px;
     /*round out the corners of the border radius*/
-    border-radius: 20%;
+    border-radius: 50%;
     /*Lower opacity so it becomes clear when hovered over*/
     opacity: 0.8;
 }
