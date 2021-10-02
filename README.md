@@ -34,7 +34,7 @@ Completed before 09/25/2021
 
 ## Screenshot
 
- image URL located within project: [./assets/images/portfolio_final.png]
+ image URL located within project: ![alt text](./assets/images/portfolio_final.png)
 
 ## Link
 
