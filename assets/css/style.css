@@ -311,6 +311,24 @@ nav a:last-child {
 .about-me-site{
     background-image: url("../images/aboutme.jpg");
 }
+.project1{
+    background-image: url("../images/Find-Ya-Pokemon\ Screenshot.jpg");
+}
+.codeQuiz{
+    background-image: url("../images/code_quiz.jpg");
+}
+.porfolio{
+    background-image: url("../images/portfolio.jpg");
+}
+.passGen{
+    background-image: url("../images/password_generator.jpg");
+}
+.workPlanner{
+    background-image: url("../images/work_planner.jpg");
+}
+.weatherDash{
+    background-image: url("../images/weather_dashboard.jpg");
+}
 
 /*Element selector for all address tags contained within Contact Me class*/
 .contactMe address{
