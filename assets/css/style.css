@@ -4,8 +4,8 @@
     --secondary: #540681;
     --tertiary: #da0c0c;
     --border: #c60ae7;
-    --dark: rgb(5, 13, 44);
-    --light: gainsboro;
+    --dark: #050d2c;
+    --light: #989daf;
 }
 /*Set font family for the entire body of the site and set width and hgith properies with box-sizing*/
 *{
