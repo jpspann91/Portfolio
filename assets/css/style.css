@@ -1,9 +1,10 @@
 /*Variables for coloring scheme*/
 :root{
-    --primary: rgb(121,82,125);
-    --secondary: cyan;
-    --tertiary: rgb(17, 71, 126);
-    --dark: rgba(28, 29, 33, 1);
+    --primary: #025532;
+    --secondary: #540681;
+    --tertiary: #da0c0c;
+    --border: #c60ae7;
+    --dark: rgb(5, 13, 44);
     --light: gainsboro;
 }
 /*Set font family for the entire body of the site and set width and hgith properies with box-sizing*/
@@ -267,7 +268,7 @@ nav a:last-child {
     /*Change BGC to black*/
     background-color: rgba(0, 0, 0, 0.3);
     /*change border color to highlight the grid item*/
-    border-color: tomato;
+    border-color: var(--border);
 }
 /*Element selector for all divs within grid-item class*/
 .grid-item div {
@@ -313,6 +314,9 @@ nav a:last-child {
 }
 .project1{
     background-image: url("../images/Find-Ya-Pokemon\ Screenshot.jpg");
+}
+.project2{
+    background-image: url("../images/project2.png");
 }
 .codeQuiz{
     background-image: url("../images/code_quiz.jpg");
